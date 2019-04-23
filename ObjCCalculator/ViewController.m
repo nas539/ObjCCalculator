@@ -89,6 +89,7 @@
           break;
         case 6:
           RunningTotal = 0;
+          Screen.text = [NSString stringWithFormat:@"0"];
           break;
         default:
           break;
@@ -120,6 +121,7 @@
           break;
         case 6:
           RunningTotal = 0;
+          Screen.text = [NSString stringWithFormat:@"0"];
           break;
         default:
           break;
@@ -151,6 +153,7 @@
           break;
         case 6:
           RunningTotal = 0;
+          Screen.text = [NSString stringWithFormat:@"0"];
           break;
         default:
           break;
@@ -181,6 +184,7 @@
           break;
         case 6:
           RunningTotal = 0;
+          Screen.text = [NSString stringWithFormat:@"0"];
           break;
         default:
           break;
@@ -207,22 +211,23 @@
         RunningTotal = RunningTotal + SelectNumber;
         break;
       case 5:
-        RunningTotal = RunningTotal;
+        Screen.text = [NSString stringWithFormat:@"%f", RunningTotal];
         break;
       case 6:
         RunningTotal = 0;
+        Screen.text = [NSString stringWithFormat:@"%f", RunningTotal];
         break;
       default:
         break;
     }
   }
   Method = 5;
-//  SelectNumber = 0;
+  SelectNumber = 0;
 }
 -(IBAction)Clear:(id)sender{
   Method = 6;
-//  RunningTotal = 0;
-//  SelectNumber = 0;
+ RunningTotal = 0;
+ SelectNumber = 0;
 }
 
 - (void)viewDidLoad {
